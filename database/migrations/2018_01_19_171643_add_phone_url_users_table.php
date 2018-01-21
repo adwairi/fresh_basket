@@ -16,6 +16,7 @@ class AddPhoneUrlUsersTable extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->integer('phone')->nullable();
             $table->string('img_url', 500)->nullable();
+            $table->boolean('verified')->default(false);
         });
     }
 
